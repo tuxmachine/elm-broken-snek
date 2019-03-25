@@ -117,7 +117,7 @@ minmax base change =
 
 subscriptions: Model -> Sub Msg
 subscriptions model =
-  Time.every 500 Tick
+  Time.every (toFloat (1000 - (model.score * 100))) Tick
 
 -- VIEW
 
